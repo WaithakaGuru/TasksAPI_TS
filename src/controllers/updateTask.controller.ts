@@ -1,5 +1,5 @@
 import { Request, Response } from "express";
-import { role } from "../middlewares/TasksUtils";
+import { role } from "../middlewares/TasksUtils.js";
 
 export async function updateTask(req: Request, res: Response){
     const id = req.params.id;

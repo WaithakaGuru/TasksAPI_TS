@@ -1,5 +1,5 @@
-import { app, config} from "./middlewares/TasksUtils";
-import router from "./routers/tasks.router";
+import { app, config} from "./middlewares/TasksUtils.js";
+import router from "./routers/tasks.router.js";
 config();
 
 const port = process.env.PORT || process.env.SERVER_PORT_NUMBER;

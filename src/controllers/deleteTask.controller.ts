@@ -1,5 +1,5 @@
 import { Response, Request } from "express";
-import { role } from "../middlewares/TasksUtils";
+import { role } from "../middlewares/TasksUtils.js";
 
 export async function deleteTask(req: Request, res: Response){
     const id = req.params.id;

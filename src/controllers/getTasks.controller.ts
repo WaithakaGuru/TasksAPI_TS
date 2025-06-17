@@ -1,5 +1,5 @@
 import { Response, Request } from "express";
-import { role } from "../middlewares/TasksUtils";
+import { role } from "../middlewares/TasksUtils.js";
 
 export async function getTasks(_req: Request, res: Response){
     try{
