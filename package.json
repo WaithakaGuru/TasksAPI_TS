@@ -3,11 +3,14 @@
   "version": "1.0.0",
   "description": "",
   "type": "module",
-  "main": "index.ts",
+  "main": "build/index.js",
   "scripts": {
     "start": "node build/index.js",
     "dev": "nodemon --watch src --exec ts-node-esm src/index.ts",
-    "build": "tsc"
+    "build": "tsc",
+    "prepare": "prisma generate",
+    "postinstall": "prisma generate",
+    "prestart": "npm run build"
   },
   "keywords": [],
   "author": "",
