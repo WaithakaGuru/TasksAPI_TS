@@ -2,6 +2,7 @@ import {getSingleTask, getTasks,  updateTask, deleteTask, createTask } from "../
 import { Router } from "express";
 const router = Router()
 
+router.get("/", (_req, res)=>{res.send("Welcome to the Home Page")});
 router.get("/tasks", getTasks);
 router.get("/tasks/:id", getSingleTask);
 router.post("/tasks", createTask)
