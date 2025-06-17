@@ -4,4 +4,4 @@ import { deleteTask } from "./deleteTask.controller";
 import { updateTask } from "./updateTask.controller";
 import { createTask } from "./createTask.controller";
 
-export default {getSingleTask, getTasks, createTask, deleteTask, updateTask}
+export {getSingleTask, getTasks, createTask, deleteTask, updateTask}
