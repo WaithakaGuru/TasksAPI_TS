@@ -1,4 +1,3 @@
-import { app } from "../middlewares/TasksUtils";
 import {getSingleTask, getTasks,  updateTask, deleteTask, createTask } from "../controllers/controllers.exports";
 import { Router } from "express";
 const router = Router()
