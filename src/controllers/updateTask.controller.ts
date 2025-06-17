@@ -2,7 +2,8 @@ import { Request, Response } from "express";
 import { role } from "../middlewares/TasksUtils";
 
 export async function updateTask(req: Request, res: Response){
-    const {id, title, taskInfo} = req.body
+    const id = req.params.id;
+    const {title, taskInfo} = req.body
     try{
         const updatedTask = await role.tasks.update({
             data: {id, title, taskInfo},
