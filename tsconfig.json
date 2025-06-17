@@ -115,7 +115,7 @@
   "compilerOptions": {
     "target": "ES2020",
     "module":"ESNext",
-    "lib": ["ESNext"],
+    "lib": ["ESNext", "DOM"],
     "moduleResolution": "node",
     "moduleDetection": "force",
     "esModuleInterop": true,
