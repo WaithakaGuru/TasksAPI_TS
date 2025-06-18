@@ -7,7 +7,7 @@
   "scripts": {
     "start": "node build/index.js",
     "dev": "nodemon --watch src --exec ts-node-esm src/index.ts",
-    "build": "npx tsc",
+    "build": "npm install typescript && npx tsc",
     "prepare": "prisma generate",
     "postinstall": "prisma generate",
     "prestart": "npm run build"
@@ -19,13 +19,13 @@
     "@prisma/client": "^6.10.0",
     "@types/node": "^24.0.3",
     "dotenv": "^16.5.0",
-    "express": "^5.1.0",
-    "typescript": "^5.8.3"
+    "express": "^5.1.0"
   },
   "devDependencies": {
     "ts-node": "^10.9.2",
     "@types/express": "^5.0.3",
     "nodemon": "^3.1.10",
-    "prisma": "^6.9.0"
+    "prisma": "^6.9.0",
+    "typescript": "^5.8.3"
   }
 }
