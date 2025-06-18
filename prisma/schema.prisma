@@ -44,7 +44,7 @@ model Posts{
 model Tasks {
   id String @id @default(uuid())
   title String @map("Task_Title")
-  taskInfo String @map("Taksk_Description")
+  taskInfo String @map("Task_Description")
   isCompleted Boolean @default(false) @map("Task_Is_Complete")
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt  @default(now())
