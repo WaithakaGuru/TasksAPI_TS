@@ -14,6 +14,33 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
+///@ignore
+model Users {
+  id String @id @default(uuid())
+  firstName String @map("First_Name")
+  lastName String @map("Last_Name")
+  emailAddress String @unique @map("Email_Address")
+  username String @map("Username")
+
+  posts Posts[]
+
+  @@map("users")
+}
+
+///@ignore
+model Posts{
+  id String @id @default(uuid())
+  title String 
+  content String 
+  createdAt DateTime @default(now()) @map("Created_At")
+  lastUpdated DateTime @updatedAt() @default(now()) @map("Last_Updated_At")
+  isDeleted Boolean @default(false) @map("Is_Deleted")
+
+  author Users @relation(fields: [authorId], references: [id])
+  authorId String  
+
+  @@map("posts")
+}
 model Tasks {
   id String @id @default(uuid())
   title String @map("Task_Title")
